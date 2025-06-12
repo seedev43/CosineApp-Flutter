@@ -7,6 +7,7 @@
   packages = [
     pkgs.jdk17
     pkgs.unzip
+    pkgs.gh
   ];
   # Sets environment variables in the workspace
   env = {};
@@ -30,7 +31,7 @@
           manager = "flutter";
         };
         android = {
-          command = ["flutter" "run" "--machine" "-d" "android" "-d" "localhost:5555"];
+          command = ["flutter" "run" "--machine" "-d" "android" "-d" "emulator-5554"];
           manager = "flutter";
         };
       };
