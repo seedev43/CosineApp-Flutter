@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:myapp/constants/app_colors.dart';
 import 'package:myapp/screens/test_screen.dart';
 import 'components/neo_button.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,6 +18,8 @@ class MyApp extends StatelessWidget {
       title: "Cosine App",
       theme: ThemeData(
         // colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 139, 7, 122)),
+        textTheme: GoogleFonts.openSansTextTheme(),
+        fontFamily: GoogleFonts.openSans().fontFamily,
       ),
       home: const HomePage(),
     );
@@ -53,6 +56,7 @@ class _HomePage extends State<HomePage> {
               backgroundColor: NeoBrutalismColors.brutalGreen,
               shadowColor: Color(0xFFcdcbc4),
               strokeColor: NeoBrutalismColors.brutalBrown,
+              width: MediaQuery.of(context).size.width * 0.8,
             ),
 
             const SizedBox(height: 16),
@@ -64,6 +68,7 @@ class _HomePage extends State<HomePage> {
               backgroundColor: NeoBrutalismColors.brutalYellow,
               shadowColor: Color(0xFFcdcbc4),
               strokeColor: NeoBrutalismColors.brutalBrown,
+              width: MediaQuery.of(context).size.width * 0.8,
             ),
 
             const SizedBox(height: 16),
@@ -75,6 +80,7 @@ class _HomePage extends State<HomePage> {
               backgroundColor: NeoBrutalismColors.brutalRed,
               shadowColor: Color(0xFFcdcbc4),
               strokeColor: NeoBrutalismColors.brutalBrown,
+              width: MediaQuery.of(context).size.width * 0.8,
             ),
           ],
         ),

@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/constants/app_colors.dart';
 
 class NeoButton extends StatelessWidget {
   final String label;
   final VoidCallback? onPressed;
   final Color backgroundColor;
   final Color borderColor;
+  final Color? fontColor;
   final Color shadowColor;
   final Color strokeColor;
   final double borderRadius;
+  final double? width;
 
   const NeoButton({
     super.key,
@@ -15,15 +18,17 @@ class NeoButton extends StatelessWidget {
     this.onPressed,
     this.backgroundColor = const Color.fromARGB(255, 245, 237, 172),
     this.borderColor = Colors.black,
+    this.fontColor = NeoBrutalismColors.brutalBrown,
     this.shadowColor = Colors.black,
     this.strokeColor = Colors.black,
     this.borderRadius = 14,
+    this.width = 250,
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 250,
+      width: width,
       decoration: BoxDecoration(
         color: backgroundColor,
         border: Border.all(color: strokeColor, width: 3),
@@ -39,7 +44,7 @@ class NeoButton extends StatelessWidget {
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
-          foregroundColor: Colors.black,
+          foregroundColor: Colors.red,
           elevation: 0, // matikan shadow default
           backgroundColor:
               Colors.transparent, // biar warna ambil dari Container
@@ -49,6 +54,7 @@ class NeoButton extends StatelessWidget {
           ),
           padding: const EdgeInsets.symmetric(vertical: 16),
           textStyle: const TextStyle(
+            color: Color(0xFFFFFFFF),
             fontSize: 18,
             // fontWeight: FontWeight.w800,
           ),
