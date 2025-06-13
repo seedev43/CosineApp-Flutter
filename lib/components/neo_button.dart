@@ -30,7 +30,7 @@ class NeoButton extends StatelessWidget {
     return Container(
       width: width,
       decoration: BoxDecoration(
-        // color: backgroundColor,
+        color: backgroundColor,
         border: Border.all(color: strokeColor, width: 4),
         borderRadius: BorderRadius.circular(borderRadius),
         boxShadow: [
@@ -46,7 +46,8 @@ class NeoButton extends StatelessWidget {
         style: ElevatedButton.styleFrom(
           foregroundColor: NeoBrutalismColors.brutalBrown,
           elevation: 0, // matikan shadow default
-          backgroundColor: backgroundColor, // biar warna ambil dari Container
+          backgroundColor:
+              Colors.transparent, // biar warna ambil dari Container
           shadowColor: Colors.transparent, // matikan shadow default
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(borderRadius),
