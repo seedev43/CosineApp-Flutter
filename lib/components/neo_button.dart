@@ -30,13 +30,13 @@ class NeoButton extends StatelessWidget {
     return Container(
       width: width,
       decoration: BoxDecoration(
-        color: backgroundColor,
-        border: Border.all(color: strokeColor, width: 3),
+        // color: backgroundColor,
+        border: Border.all(color: strokeColor, width: 4),
         borderRadius: BorderRadius.circular(borderRadius),
         boxShadow: [
           BoxShadow(
             color: shadowColor,
-            offset: Offset(5, 5), // arah bayangan (kanan bawah)
+            offset: Offset(6, 6), // arah bayangan (kanan bawah)
             blurRadius: 0, // biar bayangannya tajam (neobrutal)
           ),
         ],
@@ -44,17 +44,15 @@ class NeoButton extends StatelessWidget {
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
-          foregroundColor: Colors.red,
+          foregroundColor: NeoBrutalismColors.brutalBrown,
           elevation: 0, // matikan shadow default
-          backgroundColor:
-              Colors.transparent, // biar warna ambil dari Container
+          backgroundColor: backgroundColor, // biar warna ambil dari Container
           shadowColor: Colors.transparent, // matikan shadow default
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(borderRadius),
           ),
           padding: const EdgeInsets.symmetric(vertical: 16),
           textStyle: const TextStyle(
-            color: Color(0xFFFFFFFF),
             fontSize: 18,
             // fontWeight: FontWeight.w800,
           ),
